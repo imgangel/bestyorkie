@@ -12,33 +12,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --navy: #0b4f57;
-        --navy-deep: #062f38;
-        --navy-soft: #12707c;
-        --gold: #17bfae;
-        --gold-bright: #5fe8d5;
-        --gold-dim: #0a766c;
-        --paper: #f3faf8;
-        --card: #ffffff;
-        --ink: #123239;
-        --ink-soft: #527278;
-        --line: #d8ece8;
-        --slot-bg: #eaf6f3;
-        --slot-line: #a5d9d0;
-        --hero-text: #f2fbf8;
-        --hero-sub: #b9e6dd;
-        --shadow: 0 18px 40px rgba(6, 48, 56, 0.13);
+        --navy: #1d4028;
+        --navy-deep: #102116;
+        --navy-soft: #2e5d3e;
+        --gold: #c9a45c;
+        --gold-bright: #eccf8a;
+        --gold-dim: #8f6f2f;
+        --paper: #e2f0dd;
+        --card: #fffdf3;
+        --ink: #1c2e1e;
+        --ink-soft: #5d6f5e;
+        --line: #c2d9bf;
+        --slot-bg: #eef6ea;
+        --slot-line: #a9c6a3;
+        --hero-text: #fffbe9;
+        --hero-sub: #cfe3c8;
+        --shadow: 0 18px 40px rgba(16, 33, 22, 0.16);
         color-scheme: light;
       }
       @media (prefers-color-scheme: dark) {
         :root {
-          --paper: #05222a;
-          --card: #0a323b;
-          --ink: #ecfaf6;
-          --ink-soft: #9cc6bf;
-          --line: #174650;
-          --slot-bg: #062a32;
-          --slot-line: #22626a;
+          --paper: #0d1f13;
+          --card: #162b1c;
+          --ink: #f4f8ec;
+          --ink-soft: #a9c2a8;
+          --line: #274532;
+          --slot-bg: #122619;
+          --slot-line: #355c40;
           --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
           color-scheme: dark;
         }
@@ -69,8 +69,8 @@
       /* ---------- Hero ---------- */
       .hero {
         background:
-          radial-gradient(1100px 500px at 85% -10%, rgba(63, 224, 205, 0.30), transparent 60%),
-          radial-gradient(700px 420px at 8% 110%, rgba(23, 191, 174, 0.22), transparent 60%),
+          radial-gradient(1100px 500px at 85% -10%, rgba(236, 207, 138, 0.28), transparent 60%),
+          radial-gradient(700px 420px at 8% 110%, rgba(201, 164, 92, 0.20), transparent 60%),
           linear-gradient(160deg, var(--navy-soft) 0%, var(--navy) 45%, var(--navy-deep) 100%);
         color: var(--hero-text);
         padding: 64px 0 92px;
@@ -102,7 +102,7 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        border: 1px solid rgba(95, 232, 213, 0.55);
+        border: 1px solid rgba(236, 207, 138, 0.60);
         border-radius: 999px;
         padding: 7px 18px 7px 12px;
         font-size: 0.82rem;
@@ -120,7 +120,7 @@
         margin: 0 auto 26px;
         border-radius: 26px;
         border: 3px solid rgba(255, 255, 255, 0.9);
-        box-shadow: 0 14px 34px rgba(4, 40, 48, 0.35);
+        box-shadow: 0 14px 34px rgba(9, 26, 14, 0.38);
       }
       .hero h1 {
         font-size: clamp(2.5rem, 7vw, 4.4rem);
@@ -158,14 +158,14 @@
       .btn svg { width: 18px; height: 18px; flex: none; }
       .btn-gold {
         background: linear-gradient(180deg, var(--gold-bright), var(--gold));
-        color: #04333a;
+        color: #2a1f08;
         border: 1px solid var(--gold-bright);
       }
       .btn-gold:hover { transform: translateY(-2px); }
       .btn-ghost {
         background: transparent;
         color: var(--hero-text);
-        border: 1px solid rgba(242, 251, 248, 0.5);
+        border: 1px solid rgba(255, 251, 233, 0.55);
       }
       .btn-ghost:hover { border-color: var(--gold-bright); color: var(--gold-bright); }
       .hero-meta {
@@ -212,7 +212,7 @@
         position: relative;
         aspect-ratio: 4 / 3.4;
         background:
-          radial-gradient(420px 260px at 50% 0%, rgba(23, 191, 174, 0.15), transparent 65%),
+          radial-gradient(420px 260px at 50% 0%, rgba(201, 164, 92, 0.16), transparent 65%),
           var(--slot-bg);
         border-bottom: 1px solid var(--line);
         display: flex;
@@ -254,7 +254,7 @@
         top: 30px;
         left: -46px;
         transform: rotate(-38deg);
-        background: #c0453a;
+        background: #a61e22;
         color: #ffffff;
         font-weight: 600;
         font-size: 1.02rem;
@@ -266,7 +266,7 @@
         pointer-events: none;
       }
       .card.sold .main-img { filter: saturate(0.85); }
-      .tag.sold-tag { background: #c0453a; border-color: #c0453a; color: #ffffff; }
+      .tag.sold-tag { background: #a61e22; border-color: #a61e22; color: #ffffff; }
       .sold-note {
         border: 1.5px dashed var(--gold-dim);
         background: var(--slot-bg);
@@ -278,7 +278,7 @@
       }
       .sold-note strong {
         display: block;
-        color: #c0453a;
+        color: #a61e22;
         letter-spacing: 0.22em;
         font-size: 1.05rem;
         margin-bottom: 4px;
@@ -326,10 +326,10 @@
         font-family: "Playfair Display", Georgia, serif;
         font-size: 1.5rem;
         font-weight: 700;
-        color: var(--gold-dim);
+        color: #a61e22;
         white-space: nowrap;
       }
-      @media (prefers-color-scheme: dark) { .price { color: var(--gold-bright); } }
+      @media (prefers-color-scheme: dark) { .price { color: #f19a9d; } }
       .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
       .tag {
         font-size: 0.78rem;
@@ -341,7 +341,7 @@
         padding: 4px 12px;
       }
       .tag.solid { background: var(--navy); border-color: var(--navy); color: var(--gold-bright); }
-      @media (prefers-color-scheme: dark) { .tag.solid { background: var(--gold); border-color: var(--gold); color: #04333a; } }
+      @media (prefers-color-scheme: dark) { .tag.solid { background: var(--gold); border-color: var(--gold); color: #2a1f08; } }
       .card-desc { margin-top: 16px; color: var(--ink-soft); font-weight: 300; font-size: 1.02rem; flex: 1; }
       .fact-list { list-style: none; margin: 18px 0 0; padding: 16px 0 0; border-top: 1px solid var(--line); }
       .fact-list li {
@@ -355,12 +355,12 @@
         width: 100%;
         justify-content: center;
         background: var(--navy);
-        color: #f2fbf8;
+        color: #fffbe9;
         border: 1px solid var(--navy);
       }
       .btn-card:hover { background: var(--navy-soft); transform: translateY(-2px); }
       @media (prefers-color-scheme: dark) {
-        .btn-card { background: var(--gold); border-color: var(--gold); color: #04333a; }
+        .btn-card { background: var(--gold); border-color: var(--gold); color: #2a1f08; }
         .btn-card:hover { background: var(--gold-bright); }
       }
       /* ---------- What's included ---------- */
@@ -425,7 +425,7 @@
       .contact-band {
         margin: 64px 0 0;
         background:
-          radial-gradient(800px 380px at 15% 0%, rgba(63, 224, 205, 0.24), transparent 60%),
+          radial-gradient(800px 380px at 15% 0%, rgba(236, 207, 138, 0.24), transparent 60%),
           linear-gradient(150deg, var(--navy-soft), var(--navy) 55%, var(--navy-deep));
         color: var(--hero-text);
         border-radius: 22px;
@@ -457,7 +457,7 @@
         bottom: 26px;
         transform: translate(-50%, 20px);
         background: var(--navy);
-        color: #f2fbf8;
+        color: #fffbe9;
         border: 1px solid var(--gold);
         border-radius: 999px;
         padding: 11px 22px;
@@ -479,14 +479,14 @@
         left: 14px;
         z-index: 3;
         background: var(--gold);
-        color: #04333a;
+        color: #2a1f08;
         font-size: 0.78rem;
         font-weight: 600;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         border-radius: 999px;
         padding: 6px 14px;
-        box-shadow: 0 6px 16px rgba(6, 48, 56, 0.28);
+        box-shadow: 0 6px 16px rgba(16, 33, 22, 0.28);
       }
       /* ---------- Sold strip ---------- */
       .sold-strip {
@@ -510,7 +510,7 @@
       }
       .sold-strip h3 { font-size: 1.15rem; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
       .sold-strip .sold-chip {
-        background: #c0453a; color: #fff;
+        background: #a61e22; color: #fff;
         font-family: "Jost", sans-serif;
         font-size: 0.7rem; font-weight: 600;
         letter-spacing: 0.18em; text-transform: uppercase;
@@ -538,7 +538,7 @@
       }
       .inquiry-side {
         background:
-          radial-gradient(500px 300px at 20% 0%, rgba(63, 224, 205, 0.22), transparent 60%),
+          radial-gradient(500px 300px at 20% 0%, rgba(236, 207, 138, 0.22), transparent 60%),
           linear-gradient(160deg, var(--navy-soft), var(--navy) 55%, var(--navy-deep));
         color: var(--hero-text);
         padding: 38px 32px;
@@ -569,13 +569,13 @@
       }
       .field select {
         padding-right: 40px;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%230a766c' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%238f6f2f' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: right 14px center;
       }
       @media (prefers-color-scheme: dark) {
         .field select {
-          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235fe8d5' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23eccf8a' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
         }
       }
       .field textarea { resize: vertical; min-height: 96px; }
@@ -589,7 +589,7 @@
         width: 100%;
         justify-content: center;
         background: linear-gradient(180deg, var(--gold-bright), var(--gold));
-        color: #04333a;
+        color: #2a1f08;
         border: 1px solid var(--gold-bright);
         font-size: 1.05rem;
         cursor: pointer;
@@ -600,7 +600,7 @@
          hover state stuck after a tap — keep hover effects for pointers only. */
       @media (hover: none) {
         .btn-gold:hover, .btn-card:hover, .btn-submit:hover { transform: none; }
-        .btn-ghost:hover { border-color: rgba(242, 251, 248, 0.5); color: var(--hero-text); }
+        .btn-ghost:hover { border-color: rgba(255, 251, 233, 0.55); color: var(--hero-text); }
       }
       .consent-label {
         display: flex;
@@ -644,7 +644,7 @@
         outline: 2px solid var(--gold);
         outline-offset: 2px;
       }
-      .form-error { color: #c0453a; font-size: 0.92rem; display: none; }
+      .form-error { color: #a61e22; font-size: 0.92rem; display: none; }
       .form-error.show { display: block; }
       .form-success { text-align: center; padding: 30px 10px 22px; }
       .form-success .success-icon { width: 58px; height: 58px; margin: 0 auto 16px; color: var(--gold-dim); }
@@ -683,8 +683,8 @@
         display: inline-flex;
         align-items: center;
         gap: 9px;
-        background: #7a1f1a;
-        color: #fff7ea;
+        background: #a61e22;
+        color: #fffbe9;
         border-radius: 999px;
         padding: 7px 18px;
         font-size: 0.82rem;
@@ -692,7 +692,7 @@
         letter-spacing: 0.16em;
         text-transform: uppercase;
         margin-bottom: 16px;
-        box-shadow: 0 8px 20px rgba(122, 31, 26, 0.28);
+        box-shadow: 0 8px 20px rgba(166, 30, 34, 0.30);
       }
       .holiday-pill svg { width: 15px; height: 15px; flex: none; }
       .ready-badge {
@@ -700,15 +700,15 @@
         top: 14px;
         left: 14px;
         z-index: 3;
-        background: #7a1f1a;
-        color: #fff7ea;
+        background: #a61e22;
+        color: #fffbe9;
         font-size: 0.78rem;
         font-weight: 600;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         border-radius: 999px;
         padding: 6px 14px;
-        box-shadow: 0 6px 16px rgba(6, 48, 56, 0.28);
+        box-shadow: 0 6px 16px rgba(16, 33, 22, 0.28);
       }
       .card-photo .flyer-img {
         display: block;
@@ -717,7 +717,7 @@
         object-fit: cover;
         object-position: center top;
       }
-      .tag.holiday-tag { background: #14532d; border-color: #14532d; color: #eafaf0; }
+      .tag.holiday-tag { background: #1d4028; border-color: #1d4028; color: #e6f2e3; }
       @media (prefers-reduced-motion: reduce) {
         html { scroll-behavior: auto; }
         .btn, .toast { transition: none; }
