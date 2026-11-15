@@ -718,6 +718,96 @@
         object-position: center top;
       }
       .tag.holiday-tag { background: #1d4028; border-color: #1d4028; color: #e6f2e3; }
+
+      /* ---------- Sticky button bar ---------- */
+      body { padding-bottom: 84px; }
+      .sticky-bar {
+        position: fixed;
+        left: 0; right: 0; bottom: 0;
+        z-index: 60;
+        background: linear-gradient(150deg, #2e5d3e 0%, #1d4028 55%, #102116 100%);
+        border-top: 1px solid rgba(236, 207, 138, 0.55);
+        box-shadow: 0 -12px 32px rgba(16, 33, 22, 0.28);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      .sticky-inner {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 12px 22px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+      }
+      .sticky-copy { min-width: 0; color: #fffbe9; line-height: 1.25; }
+      .sticky-copy strong {
+        display: block;
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 1.02rem;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .sticky-copy span {
+        display: block;
+        font-size: 0.84rem;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: #cfe3c8;
+        margin-top: 2px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .sticky-actions { display: flex; gap: 10px; flex: none; }
+      .sticky-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        font-size: 0.95rem;
+        border-radius: 999px;
+        padding: 11px 20px;
+        white-space: nowrap;
+        transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+      }
+      .sticky-btn svg { width: 17px; height: 17px; flex: none; }
+      .sticky-btn-gold {
+        background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+        color: #2a1f08;
+        border: 1px solid var(--gold-bright);
+        box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+      }
+      .sticky-btn-gold:hover { transform: translateY(-1px); }
+      .sticky-btn-ghost {
+        background: transparent;
+        color: #fffbe9;
+        border: 1px solid rgba(255, 251, 233, 0.55);
+      }
+      .sticky-btn-ghost:hover { border-color: var(--gold-bright); color: var(--gold-bright); }
+      /* Keep the toast clear of the sticky bar */
+      .toast { bottom: 96px; }
+      @media (max-width: 720px) {
+        body { padding-bottom: 76px; }
+        /* Compact the hero on phones so its own buttons sit clear above the sticky bar */
+        .hero { padding-top: 30px; }
+        .hero-logo { width: 158px; margin-bottom: 18px; }
+        .brand-badge { margin-bottom: 20px; }
+        .sticky-inner { padding: 10px 14px; gap: 12px; }
+        .sticky-copy { display: none; }
+        .sticky-actions { flex: 1; width: 100%; }
+        .sticky-btn { flex: 1; padding: 12px 10px; font-size: 0.92rem; }
+        .toast { bottom: 88px; }
+      }
+      @media (hover: none) {
+        .sticky-btn-gold:hover { transform: none; }
+        .sticky-btn-ghost:hover { border-color: rgba(255, 251, 233, 0.55); color: #fffbe9; }
+      }
       @media (prefers-reduced-motion: reduce) {
         html { scroll-behavior: auto; }
         .btn, .toast { transition: none; }
@@ -1127,6 +1217,23 @@
       </footer>
 
     </main>
+
+    <!-- ============ STICKY BUTTON BAR ============ -->
+    <div class="sticky-bar" role="navigation" aria-label="Quick actions">
+      <div class="sticky-inner">
+        <div class="sticky-copy">
+          <strong>Puppies ready for Christmas</strong>
+          <span>1 boy ready now &middot; Coco's boys Dec 19</span>
+        </div>
+        <div class="sticky-actions">
+          <a class="sticky-btn sticky-btn-ghost" href="#puppies">See Puppies</a>
+          <a class="sticky-btn sticky-btn-gold" href="#inquire">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Ask About a Puppy
+          </a>
+        </div>
+      </div>
+    </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
